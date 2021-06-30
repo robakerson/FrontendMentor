@@ -1,142 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Single Price Grid Component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; bottom:0; position:absolute;}
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      bottom: 0;
+      position: absolute;
+    }
 
-body{
-background-color: hsl(204, 43%, 93%);
-font-family: 'Karla', sans-serif;
-}
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
 
-.outside-cont{
-box-shadow: 10px 10px 20px hsl(204, 43%, 85%);
-border-radius:10px;
-position:absolute;
-top:22.5%;
-left:25%;
-height:55%;
-width:50%;
-text-align:center;
-}
+    body {
+      background-color: hsl(204, 43%, 93%);
+      font-family: 'Karla', sans-serif;
+    }
 
-.top-half{
-border-radius:10px 10px 0 0;
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:45%;
-background-color:white;
-}
-.btm-left{
-background-color: hsl(179, 62%, 43%);
-border-radius:0 0 0 10px;
-position:absolute;
-bottom:0;
-height:55%;
-width:50%;
-left:0;
-}
-.btm-right{
-background-color:hsl(179, 62%, 46%);
-border-radius:0 0 10px 0;
-position:absolute;
-bottom:0;
-height:55%;
-width:50%;
-right:0;
-overflow:hidden;
-}
+    .outside-cont {
+      box-shadow: 10px 10px 20px hsl(204, 43%, 85%);
+      border-radius: 10px;
+      position: absolute;
+      top: 22.5%;
+      left: 30%;
+      height: 55%;
+      width: 40%;
+      text-align: center;
+    }
 
-.lg-blue{
-color: hsl(179, 62%, 43%);
-font-weight:700;
-font-size:2rem;
-text-align:left;
-margin: 5% 0 0 5%;
-}
+    .top-half {
+      border-radius: 10px 10px 0 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 45%;
+      background-color: white;
 
-.med-yellow{
-color:hsl(71, 73%, 54%);
-font-weight:700;
-font-size:1.5rem;
-text-align:left;
-margin: 2% 0 3% 5%;
-}
+      overflow: hidden;
+    }
 
-.extra-txt-top{
-color: hsl(218, 22%, 50%);
-font-weight:500;
-font-size:1.1rem;
-text-align:left;
-margin: 1% 0 0 5%;
-}
+    .btm-left {
+      background-color: hsl(179, 62%, 44%);
+      border-radius: 0 0 0 10px;
+      position: absolute;
+      bottom: 0;
+      height: 55%;
+      width: 50%;
+      left: 0;
+      overflow: hidden;
+    }
 
-.btm-headline{
-color:white;
-font-weight:700;
-font-size:1.5rem;
-text-align:left;
-margin: 10% 0 5% 10%;
-}
+    .btm-right {
+      background-color: hsl(179, 62%, 46%);
+      border-radius: 0 0 10px 0;
+      position: absolute;
+      bottom: 0;
+      height: 55%;
+      width: 50%;
+      right: 0;
+      overflow: hidden;
+    }
 
-.btm-xtra-wht{
-color:white;
-font-weight:100;
-font-size:1rem;
-text-align:left;
-margin: 0 0 0 10%;
-line-height:1.3;
+    .lg-blue {
+      color: hsl(179, 62%, 43%);
+      font-weight: 700;
+      font-size: 2rem;
+      text-align: left;
+      margin: 5% 0 0 5%;
+    }
+
+    .med-yellow {
+      color: hsl(71, 73%, 54%);
+      font-weight: 700;
+      font-size: 1.5rem;
+      text-align: left;
+      margin: 2% 0 3% 5%;
+    }
+
+    .extra-txt-top {
+      color: hsl(218, 22%, 67%);
+      font-weight: 500;
+      font-size: 1.1rem;
+      text-align: left;
+      margin: 1% 0 0 5%;
+    }
+
+    .btm-headline {
+      color: white;
+      font-weight: 700;
+      font-size: 1.5rem;
+      text-align: left;
+      margin: 10% 0 5% 10%;
+    }
+
+    .btm-xtra-wht {
+      color: white;
+      font-weight: 100;
+      font-size: 1rem;
+      text-align: left;
+      margin: 0 0 0 10%;
+      line-height: 1.4;
+    }
+
+    .per-month{
+color:hsl(179, 62%, 70%);
+bottom:6px;
+left:5px;
+position:relative;
+    }
+
+    .big-dollar{
+      color: white;
+      font-weight: 1000;
+      font-size: 2rem;
+    }
+
+    .align-left{
+      text-align: left;
+            margin: 0 0 0 10%;
+    }
+
+    .full-access{
+            color: white;
+            text-align: left;
+            margin: 4% 0 0 10%;
+
+    }
+
+    .myButton {
+	box-shadow: 16px 12px 43px 0px hsl(179, 62%, 40%);
+	background-color:hsl(71, 73%, 54%);
+  display:inline-block;
+	border-radius:5px;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	font-weight:bold;
+	padding:4% 30%;
+	text-decoration:none;
+}
+.myButton:hover {
+	background-color:hsl(71, 73%, 44%);
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.button-pos{
+  width:100%;
+  text-align:justify;
+  position:absolute;
+  margin: 10% 0 0 10%;
 }
 
   </style>
 </head>
+
 <body>
-<div class= "outside-cont">
-<div class="top-half">
-  <div class="lg-blue">Join our community</div>
+  <div class="outside-cont">
+    <div class="top-half">
+      <div class="lg-blue">Join our community</div>
 
-  <div class="med-yellow">30-day, hassle-free money back guarantee</div>
+      <div class="med-yellow">30-day, hassle-free money back guarantee</div>
 
-  <div class="extra-txt-top">Gain access to our full library of tutorials along with expert code reviews. </div>
-  <div class="extra-txt-top">Perfect for any developers who are serious about honing their skills.</div>
-</div>
-<div class="btm-left">
-  <div class="btm-headline">Monthly Subscription</div>
+      <div class="extra-txt-top">Gain access to our full library of tutorials along with expert code reviews. </div>
+      <div class="extra-txt-top">Perfect for any developers who are serious about honing their skills.</div>
+    </div>
+    <div class="btm-left">
+      <div class="btm-headline">Monthly Subscription</div>
 
-  <div>&dollar;29 per month</div>
+      <div class="align-left"><span class="big-dollar">&dollar;29 </span><span class="per-month">per month</span></div>
 
-  <div>Full access for less than &dollar;1 a day</div>
+      <div class="full-access">Full access for less than &dollar;1 a day</div>
 
-  Sign Up
-</div>
-<div class="btm-right">
-  <div class="btm-headline">Why Us</div>
+      <div class="button-pos"><a href="#" class="myButton">Sign Up</a></div>
+    </div>
+    <div class="btm-right">
+      <div class="btm-headline">Why Us</div>
 
-  <div class="btm-xtra-wht">Tutorials by industry experts</div>
-  <div class="btm-xtra-wht">Peer &amp; expert code review</div>
-  <div class="btm-xtra-wht">Coding exercises</div>
-  <div class="btm-xtra-wht">Access to our GitHub repos</div>
-  <div class="btm-xtra-wht">Community forum</div>
-  <div class="btm-xtra-wht">Flashcard decks</div>
-  <div class="btm-xtra-wht">New videos every week</div>
+      <div class="btm-xtra-wht">Tutorials by industry experts</div>
+      <div class="btm-xtra-wht">Peer &amp; expert code review</div>
+      <div class="btm-xtra-wht">Coding exercises</div>
+      <div class="btm-xtra-wht">Access to our GitHub repos</div>
+      <div class="btm-xtra-wht">Community forum</div>
+      <div class="btm-xtra-wht">Flashcard decks</div>
+      <div class="btm-xtra-wht">New videos every week</div>
+    </div>
   </div>
-</div>
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer>
 </body>
+
 </html>
