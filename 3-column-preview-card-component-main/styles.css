@@ -1,0 +1,75 @@
+body{
+font-size:15px;
+font-family: 'Lexend Deca', sans-serif;
+background-color:hsl(0, 0%, 95%);
+color:hsl(0, 0%, 95%);
+}
+
+h1{
+font-family: 'Big Shoulders Display', cursive;
+font-weight:700;
+margin: 2rem 0 2rem 0;
+}
+
+p{
+color:hsla(0, 0%, 100%, 0.75);
+line-height:2;
+}
+
+.outsideContainer{
+display:flex;
+height:95vh;
+align-items:center;
+justify-content:center;
+}
+
+.categoryContainer{
+width:14rem;
+padding:3rem;
+}
+
+.sedansContainer{
+background-color:hsl(31, 77%, 52%);
+border-radius:0.75rem 0 0 0.75rem;
+}
+.suvContainer{
+background-color:hsl(184, 100%, 22%);
+}
+.luxuryContainer{
+background-color:hsl(179, 100%, 13%);
+border-radius:0 0.75rem 0.75rem 0;
+}
+
+.myButton {
+	background-color:#fff;
+	border-radius:2rem;
+	margin: 4rem 0 1.5rem 0;
+	padding:1rem 2rem;
+	text-decoration:none;
+  	border: 1px solid  hsl(0, 0%, 95%);
+}
+
+
+.myButton.sedans{
+color:hsl(31, 77%, 52%);
+}
+
+.myButton.suvs{
+color:hsl(184, 100%, 22%);
+}
+
+.myButton.luxury{
+color:hsl(179, 100%, 13%);
+}
+.myButton:hover {
+  	background-color: transparent;
+	cursor:pointer;
+	color:#FFF;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.attribution { font-size: 11px; text-align: center;}
+.attribution a { color: hsl(228, 45%, 44%); }
